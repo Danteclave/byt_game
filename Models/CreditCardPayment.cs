@@ -8,5 +8,10 @@ namespace byt_game.Models
 {
     class CreditCardPayment
     {
+        public string CreditCardNumber { get; }
+        public CreditCardPayment(string number)
+        {
+            CreditCardNumber = number;
+        }
     }
 }

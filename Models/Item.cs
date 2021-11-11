@@ -8,6 +8,12 @@ namespace byt_game.Models
 {
     class Item
     {
+        public string Name { get; set; }
+        /// <summary>
+        /// url to the image
+        /// </summary>
+        public string Image { get; set; }
 
+        public string Description { get; set; }
     }
 }
