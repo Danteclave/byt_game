@@ -8,24 +8,24 @@ namespace byt_game.Models
 {
     class Admin : Player
     {
-        public static void AddStrike()
+        public static string AddStrike(Player player)
         {
-            ;
+            return $"admin added a strike to the player {player.Username}";
         }
 
-        public static void DeleteUser()
+        public static string DeleteUser(Player player)
         {
-            ;
+            return $"admin deleted the player {player.Username}";
         }
 
-        public static void AddAdmin()
+        public static string AddAdmin(Player player)
         {
-            ;
+            return $"added player {player.Username} as an admin";
         }
 
-        public static void ModifyUser()
+        public static string ModifyUser(Player player)
         {
-            ;
+            return $"admin modified the player {player.Username}";
         }
     }
 }
