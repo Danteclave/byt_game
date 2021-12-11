@@ -13,24 +13,27 @@ namespace byt_game.Models
             mailbox = new Mailbox();
             inventory = new Inventory();
             RankingPoints = 0;
+            friends = new List<Player>();
+            duels = new List<Duel>();
+            trades = new List<Trade>();
+            transactions = new List<Transaction>();
         }
 
         long RankingPoints { get; set; }
 
-        ICollection<Player> getFriends()
+        public ICollection<Player> getFriends()
         {
             return friends;
         }
 
         private readonly Inventory inventory;
         private readonly Mailbox mailbox;
-        private User user;
         public Mailbox openMailbox()
         {
             return mailbox;
         }
 
-        string InviteToTrade(Player other, Item item, int count)
+        public string InviteToTrade(Player other, Item item, int count)
         {
             return $"{Username} just invited {other.Username} to trade.";
         }
@@ -40,7 +43,7 @@ namespace byt_game.Models
             return "player just logged in";
         }
 
-        public ICollection<Player> friends;
+        private ICollection<Player> friends;
         public ICollection<Duel> duels;
         public ICollection<Trade> trades;
         public ICollection<Transaction> transactions;
