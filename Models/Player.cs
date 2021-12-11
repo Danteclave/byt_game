@@ -40,11 +40,6 @@ namespace byt_game.Models
             return "player just logged in";
         }
 
-        public override string Register()
-        {
-            return "player just registered";
-        }
-
         public ICollection<Player> friends;
         public ICollection<Duel> duels;
         public ICollection<Trade> trades;
