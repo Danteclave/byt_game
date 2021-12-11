@@ -8,5 +8,6 @@ namespace byt_game.Models
 {
     class PaymentMethod
     {
+        string paymentDescription { get; set; }
     }
 }

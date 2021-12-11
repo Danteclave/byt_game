@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace byt_game.Models
 {
-    class PayPalPayment
+    class PayPalPayment : PaymentMethod
     {
         public string PaypalUserName { get; }
+
         public PayPalPayment(string username)
         {
             PaypalUserName = username;

@@ -16,6 +16,7 @@ namespace byt_game
         Item item = new Item("hammer", "imageurl", "does 5 damage");
 
         [Fact]
+        
         public void ItemconstructorsTest ()
         {
             Item newItem = new Item(name, description, image);
@@ -35,7 +36,10 @@ namespace byt_game
         public void ItemSettersTest()
         {
             item.Name = "Sword";
-            Assert.Equal("Hammer", item.Name);
+            Assert.Equal("Sword", item.Name);
+            item.Description = "does 2 damage";
+            Assert.Equal("does 2 damage", item.Description);
+
         }
 
 
