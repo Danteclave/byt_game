@@ -47,10 +47,5 @@ namespace byt_game.Models
         public ICollection<Duel> duels;
         public ICollection<Trade> trades;
         public ICollection<Transaction> transactions;
-
-        public override string ToString()
-        {
-            return Username;
-        }
     }
 }

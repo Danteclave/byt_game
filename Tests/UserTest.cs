@@ -16,11 +16,11 @@ namespace byt_game.Tests
         {
             ICollection<ValidationResult> results = new List<ValidationResult>();
             Player tmp = new Player(); //using Player because it inherits from the User and user is an abstract class
-            tmp.Username = "123456789012314";
-            tmp.Password = "sosfydshaukfigeu";
+            tmp.Username = "12345678dfgshjhfd9012314";
+            tmp.Password = "sosfydgfdshjkasdkfjhgshaukfigeu";
             tmp.Email = "tfedaghudfsdusfdaujidegfyheaujgfajfgedajyhest@amogus.com";
             tmp.Contact_number = "1234567895246732584612735";
-            Assert.False(Validator.TryValidateObject(tmp, new ValidationContext(tmp), results));//checking if the validation fails because every field is set to an incorrect value.
+            Assert.False(Validator.TryValidateObject(tmp, new ValidationContext(tmp), results, true));//checking if the validation fails because every field is set to an incorrect value.
         }
 
         [Fact]
