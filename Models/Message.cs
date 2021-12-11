@@ -14,8 +14,8 @@ namespace byt_game.Models
         [Required]
         public readonly Mailbox receiver;
         [Required]
-        [MaxLength(20)]
-        public readonly string contents;
+        [StringLength(20)]
+        public string contents { get; set; }
         
         public Message(Mailbox sender, Mailbox receiver, string contents)
         {
