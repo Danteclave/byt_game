@@ -24,19 +24,35 @@ namespace byt_game.Models
 
         private readonly Inventory inventory;
         private readonly Mailbox mailbox;
+        private User user;
         public Mailbox openMailbox()
         {
             return mailbox;
         }
 
-        void InviteToTrade(Player other, Item item, int count)
+        string InviteToTrade(Player other, Item item, int count)
         {
-            ;
+            return $"{Username} just invited {other.Username} to trade.";
+        }
+
+        public override string Login()
+        {
+            return "player just logged in";
+        }
+
+        public override string Register()
+        {
+            return "player just registered";
         }
 
         public ICollection<Player> friends;
         public ICollection<Duel> duels;
         public ICollection<Trade> trades;
         public ICollection<Transaction> transactions;
+
+        public override string ToString()
+        {
+            return Username;
+        }
     }
 }
