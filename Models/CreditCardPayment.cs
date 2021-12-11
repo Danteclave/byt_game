@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace byt_game.Models
 {
-    class CreditCardPayment
+    class CreditCardPayment : PaymentMethod
     {
+        public string CreditCardNumber { get; }
+        public CreditCardPayment(string number)
+        {
+            CreditCardNumber = number;
+        }
     }
 }

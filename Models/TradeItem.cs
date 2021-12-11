@@ -8,5 +8,7 @@ namespace byt_game.Models
 {
     class TradeItem
     {
+        public Item item { get; set; }
+        public int count { get; set; }
     }
 }

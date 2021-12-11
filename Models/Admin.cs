@@ -6,7 +6,26 @@ using System.Threading.Tasks;
 
 namespace byt_game.Models
 {
-    class Admin
+    class Admin : Player
     {
+        public static void AddStrike()
+        {
+            ;
+        }
+
+        public static void DeleteUser()
+        {
+            ;
+        }
+
+        public static void AddAdmin()
+        {
+            ;
+        }
+
+        public static void ModifyUser()
+        {
+            ;
+        }
     }
 }
