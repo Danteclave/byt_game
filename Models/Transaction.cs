@@ -21,11 +21,11 @@ namespace byt_game.Models
 
         [Required]
         [Range(0, 1000)]
-        public readonly Decimal price; //Decimal because we don't want silly rounding errors with normal floats/doubles
+        public Decimal price { get; set; } //Decimal because we don't want silly rounding errors with normal floats/doubles
 
         [Required]
         [Range(0, 1000000)]
-        public readonly long diamondsBought;
+        public  long diamondsBought { get; set; }
 
         PaymentMethod paymentMethod;
     }

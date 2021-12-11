@@ -33,9 +33,9 @@ namespace byt_game.Tests
                 );
             ICollection<ValidationResult> results = new List<ValidationResult>();
 
-            //everything is set correctly so the validator should return true
+            //checking if the validation fails because every field is set to an incorrect value.
             Assert.False(Validator.TryValidateObject(message, new ValidationContext(message), results, true));
-            Console.WriteLine(results);
+           
            
         }
 

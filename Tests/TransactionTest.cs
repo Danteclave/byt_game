@@ -25,9 +25,9 @@ namespace byt_game.Tests
         [Fact]
         public void TransactionConstraintsTest()
         {
-            Transaction transaction1 = new Transaction(900, 1000, new PaymentMethod());
+            Transaction transaction1 = new Transaction(90000, 10000000, new PaymentMethod());
             ICollection<ValidationResult> results = new List<ValidationResult>();
-            Assert.True(Validator.TryValidateObject(transaction1, new ValidationContext(transaction1), results, true));
+            Assert.False(Validator.TryValidateObject(transaction1, new ValidationContext(transaction1), results, true));
         }
     }
 }
