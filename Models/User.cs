@@ -10,7 +10,7 @@ namespace byt_game.Models
     abstract class User
     {
         [Required]
-        [MaxLength(20)]
+        [StringLength(20)]
         public string Username { get; set; }
         [Required]
         [MaxLength(20)]
