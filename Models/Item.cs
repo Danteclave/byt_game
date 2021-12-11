@@ -10,7 +10,7 @@ namespace byt_game.Models
     class Item
     {
         [Required]
-        [MaxLength(3)]
+        [MaxLength(25)]
         public string Name { get; set; }
         /// <summary>
         /// url to the image
@@ -20,14 +20,8 @@ namespace byt_game.Models
         public string Image { get; set; }
 
         [Required]
-
+        [MaxLength(50)]
         public string Description { get; set; }
 
-        public Item (string name, string image, string description)
-        {
-            Name = name;
-            Image = image;
-            Description = description;
-        }
     }
 }
