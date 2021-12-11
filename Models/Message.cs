@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace byt_game.Models
         public readonly Mailbox sender;
         public readonly Mailbox receiver;
         public readonly string contents;
-
+      
         public Message(Mailbox sender, Mailbox receiver, string contents)
         {
             this.sender = sender;
@@ -24,7 +25,7 @@ namespace byt_game.Models
             // ...
             return new Message(from, to, contents);
         }
-
+        
         public static void DeleteMessage(Message message)
         {
             ;
